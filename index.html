@@ -1,16 +1,42 @@
 <!doctype html>
 <html lang="zh-Hant-TW">
-    <head>
         <meta charset="UTF-8">
+
+    <head>
+        
         <title>
             this the a project.
         </title>
         <style>
+            #b1{
+                height: 100px;
+                width: 100px;
+                font-size: 30px;
+            }
+            #b2{
+                height: 80px;
+                width: 250px;
+                font-size: 30px;
+            }
+            #inner{
+                font-size: 20px;
+                background-color: rgb(201, 174, 134);
+            }
+            #inner2{
+                background-color: rgb(84, 230, 193);
+            }
+            #pic1{
+                height: 80%;
+                width: 70%;
+            }
+            .pic1{
+                height: 100%;
+                width: 60%;
+            }
             body{
                 background-image : url("https://gss0.baidu.com/9vo3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/4ec2d5628535e5dd464d76e277c6a7efce1b62ae.jpg");
                 background-repeat: no-repeat;
                 background-size: 80% auto;
-                
             }
             .body{
                 background-image : url("http://friendoprod.blob.core.windows.net/missionpics/images/3871/member/946c784b-ee4a-4be8-8b77-9fd3349faef0.jpg");
@@ -45,16 +71,6 @@
                 margin:0px;
                 padding: 1em;
             }
-            nav ul {
-                list-style-type: none;
-                padding: 0;
-                width: 150%;
-            }
-               
-            nav ul a {
-                text-decoration: none;
-            }
-            
             article {
                 margin-left: 200px;
                 border-left: 1px solid gray;
@@ -62,22 +78,67 @@
                 overflow: hidden;
             }
         </style>
+        
     </head>
 
     <body>
         <div class="container">
             <header>
-                    <marquee scrollamount="50" behavior="alternate"><strong>多　　拉　　Ａ　　夢　　 　　 　多　　拉　　Ａ　　夢　　 　　多　　拉　　Ａ　　夢 </strong></marquee>
+                    <marquee id = "run" scrollamount="90" behavior="alternate"><strong>　　 　　 　多　　拉　　Ａ　　夢　　 　　多　　拉　　Ａ　　夢 </strong></marquee>
             </header>
+            
             <nav>
-                <button type="button" class = "first"><img class ="firstimage" src="http://www.getjoys.net/sharingSub/1609/ej1311921932855568007752.jpg" onclick="location.href='https://cfu492811.github.io/new/d0550839'"></button><br/>
+                <button type="button" class = "first"><img class ="firstimage" src="http://www.getjoys.net/sharingSub/1609/ej1311921932855568007752.jpg" onclick="location.href='https://cfu492811.github.io/new/zhennnnnn'"></button><br/>
                 <button type="button" class = "first"><img class ="firstimage" src="http://i.imgur.com/Yat4bW6.jpg" onclick="location.href='https://cfu492811.github.io/new/d0611219'"></button><br/>
-                <button type="button" class = "first"><img class ="firstimage" src="https://pbs.twimg.com/media/DLHHszfUQAA41QM.jpg" onclick="location.href='https://cfu492811.github.io/new/zhennnnnn'"></button>
+                <button type="button" class = "first"><img class ="firstimage" src="https://pbs.twimg.com/media/DLHHszfUQAA41QM.jpg" onclick="location.href='https://cfu492811.github.io/new/d0550839'"></button>
             </nav>
             
             <article class="body">
-                <h1>London</h1>
+                <div>
+                    <button id = "b1" onclick="showImage()" style = "display : inline-block">作者</button>
+                    <img id = "myImage" src="http://rr.img.naver.jp/mig?src=http%3A%2F%2Fimgcc.naver.jp%2Fkaze%2Fmission%2FUSER%2F20150208%2F34%2F3099194%2F2%2F240x350x2b3a312e98f04d2d37158813.jpg%2F300%2F600&twidth=300&theight=600&qlt=80&res_format=jpg&op=r" style= "display : none;" alt="Flowers in Chania">
+                    <button id = "b2" onclick="showInner()" style = "display : none">藤子不二雄</button>
+                    <div id = "inner" style = "display : none">1947年生，創作靈感，多啦A夢的創造要追溯到1969年的某個截稿日，藤子不二雄的家裡突然闖進了一隻小貓。藤子不二雄在畫《大雄與發條城》時突然暈倒，不久由於肝衰竭去世。</div>
+                    <button id = "b3" onclick="showAll()" style = "display : none">多拉A夢</button>
+                    <div id = "inner2" style = "display : none">多啦A夢的意思，多啦A夢這個名字其實就是銅(Doraemon)，日文里「哆拉燒」就是銅鑼燒。
+                            大雄暗指日本本身；胖虎則象徵著美國的武力；小夫象徵著國際資本主義；靜香則是哆啦A夢許諾的美好未來，即是作者對日本美好未來的想像。最重要的哆啦A夢，扮演的角色定位奇異，大致是「通往幸福的方式」──有時是「右派科技經濟決定論」，利用科技及經濟帶給大雄好的生活（拿出各種道具時）；有時又扮演「民主」的角色（循循善誘，要求勿依賴道具，要大雄提升國民素養）。</div>
+                    <button id = "b4" onclick="showPic()" style = "display : none">勞基法</button>
+                    
+                    <button type="button" id = "pic1" style="display:none"><img class ="pic1" src="http://img.chinatimes.com/newsphoto/2017-11-23/656/20171123003820.jpg" onclick="PicOff()"></button>
+                    <br/><br/><br/>
+                </div>
             </article>
         </div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/mfWp3c-MpVU?rel=0&loop=1&playlist=9bZkp7q19f0&autoplay=1" frameborder="0" hidden="1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        
+        <script>
+        function showImage() {
+            document.getElementById("b1").style.display = "none";
+            document.getElementById("myImage").style.display = "inline-block";
+            document.getElementById("b2").style.display = "inline-block";
+        }
+        function showInner() {
+            document.getElementById("myImage").style.display = "none";
+            document.getElementById("b2").style.display = "none";
+            document.getElementById("b3").style.display = "inline-block";
+            document.getElementById("inner").style.display = "inline-block";
+        }
+        function showAll() {
+            document.getElementById("b3").style.display = "none";
+            document.getElementById("inner").style.display = "none";
+            document.getElementById("inner2").style.display = "inline-block";
+            document.getElementById("b4").style.display = "inline-block";
+        }
+        function showPic() {
+            document.getElementById("inner2").style.display = "none";
+            document.getElementById("b4").style.display = "none";
+            document.getElementById("pic1").style.display = "inline-block";
+        }
+        function PicOff() {
+            document.getElementById("inner2").style.display = "none";
+            document.getElementById("b4").style.display = "none";
+            document.getElementById("pic1").style.display = "none";
+        }
+        </script>
     </body>
 </html>
